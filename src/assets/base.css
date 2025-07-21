@@ -8,17 +8,40 @@
   --color-text-blue: #273777;
   --color-brown: #813131;
   --color-red: #aa2423;
+  --main-color: #ffff;
+  --color-blur:rgba(255, 255, 255, 0.3);
+  --shadow-blur:0 4px 10px rgba(59, 130, 246, 0.3);
+  --color-gradient:radial-gradient(
+        circle at center,
+        white 0%,
+        #C8D3FF 60%,
+        rgba(124, 131, 159, 0.25) 100%
+      );
+    /* --color-gradient-hero: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #C8D3FF 100%); */
+
   --font-roboto: Roboto;
 }
 
 :root {
   font-size: min(24px, 3vw);
 }
-
+*{
+  margin:0;
+}
+li{display: block;
+height: auto;}
+a{
+  display: block;
+}
 body {
   min-height: 100vh;
   line-height: 1;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--main-color);
+  /* font-size: 24px; */
+     font-family: 'Roboto', sans-serif;
+  font-weight: 100; /* thin */
+    color:#000000;
 }
