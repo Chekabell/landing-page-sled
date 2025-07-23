@@ -73,6 +73,32 @@ export default defineComponent({
                 }}
               />
             </section>
+            <section>
+              <Container>
+                <div class="flex flex-col">
+                  <h2
+                    class={'text-[2.7rem]  relative leading-[140%] text-blue font-semibold'}
+                    id="goal"
+                  >
+                    <span class="highlighted relative ">ЦЕЛЬ</span> ПРОЕКТА:
+                  </h2>
+
+                  <p class={'max-w-[734px] w-full font-light py-[1.4rem] leading-[100%]'}>
+                    Разработка MVP приложения, которое из 2D изображений следа обуви с разных
+                    ракурсов позволит создать 3D-модель следа обуви и определить с помощью
+                    ИИ его базовые параметры, такие как группа обуви, длина следа обуви, длина
+                    и ширина его составных частей и др. Так же приложение после анализа параметров
+                    следа обуви ИИ сможет их сопоставить с базой данных обуви и указать ссылку
+                    на определённую модель обуви, с которой будет выявлено совпадение.
+                  </p>
+                </div>
+              </Container>
+            </section>
+            <section>
+              <Container>
+                <div class="flex justify-between"></div>
+              </Container>
+            </section>
           </main>
         </div>
       )
