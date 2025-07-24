@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
 
+@tailwind utilities;
+
 @theme {
   --color-bg-primary: #fff;
   --color-blue: #273777;
@@ -61,4 +63,9 @@ body {
   right: 0;
   background-color: var(--color-text-blue);
   z-index: -1;
+}
+
+@utility container {
+  margin-inline: 0 auto;
+  padding-inline: 7rem;
 }
