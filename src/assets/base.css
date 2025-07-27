@@ -3,6 +3,32 @@
 
 @tailwind utilities;
 
+@layer utilities {
+  .container {
+    margin-inline: auto;
+    padding-inline: 1rem;
+
+    @media (min-width: 640px) {
+      padding-inline: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      max-width: 1024px;
+    }
+
+    @media (min-width: 1280px) {
+      max-width: 1280px;
+    }
+
+    @media (min-width: 1440px) {
+      max-width: 1440px;
+    }
+    @media (min-width: 1920px) {
+      max-width: 1710px;
+    }
+  }
+}
+
 @theme {
   --color-bg-primary: #fff;
   --color-blue: #273777;
@@ -23,13 +49,16 @@
 
   --font-roboto: Roboto;
 }
+/* @utility container {
+  margin: 0 auto;
+
+  padding-inline: 0.65rem;
+} */
 
 :root {
-  font-size: min(24px, 3vw);
+  font-size: 24px;
 }
-* {
-  margin: 0;
-}
+
 li {
   display: block;
   height: auto;
@@ -38,6 +67,7 @@ a {
   display: block;
 }
 body {
+  scroll-behavior: smooth;
   min-height: 100vh;
   line-height: 1;
   text-rendering: optimizeLegibility;
@@ -65,7 +95,39 @@ body {
   z-index: -1;
 }
 
-@utility container {
-  margin-inline: 0 auto;
-  padding-inline: 7rem;
+.burger-btn {
+  /* display: none; */
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+}
+.burger-btn span {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: gray;
+  left: 5px;
+  transition:
+    opacity 0.2s,
+    transform 0.5s,
+    background-color 0.5s;
+}
+.burger-btn span:nth-child(1) {
+  transform: translateY(-10px);
+}
+.burger-btn span:nth-child(3) {
+  transform: translateY(10px);
+}
+.burger-btn.open span {
+  background-color: black;
+}
+.burger-btn.open span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+}
+.burger-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+.burger-btn.open span:nth-child(3) {
+  transform: translateY(0) rotate(-45deg);
 }

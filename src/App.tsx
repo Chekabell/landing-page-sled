@@ -4,13 +4,15 @@ import Sled from '@/assets/logo.svg'
 import Sled2 from '@/assets/logo2.png'
 import MockUp from '@/assets/MockUp.png'
 import CarouselAboutApplication from './components/CarouselAboutApplication'
+import Header from './components/Header'
 
 export default defineComponent({
   setup() {
     return () => (
       <div class={'flex flex-col min-h-dvh overflow-hidden'}>
         <main>
-          <header
+          <Header />
+          {/* <header
             class={
               'fixed top-0 w-full py-[1.667rem] z-10 bg-blur backdrop-blur-[10px]   overflow-hidden '
             }
@@ -42,32 +44,35 @@ export default defineComponent({
                 </nav>
               </div>
             </Container>
-          </header>
+          </header> */}
           <section
-            class={'flex flex-col h-[900px] relative py-[106px] bg-gradient'}
+            class={'flex flex-col min-h-[962px] relative py-[156px]  lg:py-[106px] bg-gradient'}
             style={{
               background:
                 'radial-gradient(circle at right, white 0%, #C8D3FF 60%, rgba(124, 131, 159, 0.25) 100%)',
             }}
           >
-            <div class="flex relative">
-              <Container>
-                <div class="flex items-center justify-center">
-                  {' '}
-                  <div class="flex flex-col">
+            <div class="flex flex-1 items-center">
+              <div class={'container mx-auto'}>
+                <div class="flex flex-col lg:flex-row  lg:items-center  relative ">
+                  <div class="flex flex-col gap-[1.5rem]">
                     <img class={'max-w-[400px] h-[101px]'} src={Sled2} alt="След" />
-                    <h1 class={' font-extralight text-[2.7rem]'}>
-                      Приложение по созданию <br /> 3D-модели следа обуви
+                    <h1
+                      class={
+                        'font-extralight text-[clamp(27px,2.5vw+0.5rem,2.7rem)] leading-[2rem]'
+                      }
+                    >
+                      Приложение по созданию <br class={'hidden lg:block'} /> 3D-модели следа обуви
                     </h1>
                   </div>
-                  <div class="flex z-20">
-                    <img src={MockUp} alt="Телефон" />
+                  <div class="lg:absolute static right-[-80px] flex max-w-[762px] max-h-[862px] z-1">
+                    <img class={'max-w-full max-h-full'} src={MockUp} alt="Телефон" />
                   </div>
                 </div>
-              </Container>
+              </div>
             </div>
             <div
-              class="absolute right-0 bg-gradient-hero w-[476px] top-0 h-full rounded-[30px]"
+              class="absolute lg:block hidden right-0 bg-gradient-hero w-[476px] top-0 h-full rounded-[30px]"
               style={{
                 background: 'linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #C8D3FF 100%)',
               }}
