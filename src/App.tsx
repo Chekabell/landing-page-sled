@@ -1,10 +1,12 @@
 import { defineComponent } from 'vue'
 import Container from './components/Container'
-import Sled from '@/assets/logo.svg'
 import Sled2 from '@/assets/logo2.png'
+import Lineika from '@/assets/Lineika.png'
+import Arrow from '@/assets/arrow.png'
 import MockUp from '@/assets/MockUp.png'
 import CarouselAboutApplication from './components/CarouselAboutApplication'
 import Header from './components/Header'
+import ProblemSolution from './components/ProblemSolution'
 
 export default defineComponent({
   setup() {
@@ -99,12 +101,11 @@ export default defineComponent({
               </div>
             </Container>
           </section>
-          <section>
-            <Container>
-              <div class="flex justify-between"></div>
-            </Container>
-          </section>
-          <CarouselAboutApplication />
+
+          <ProblemSolution />
+          <Container>
+            <CarouselAboutApplication />
+          </Container>
         </main>
       </div>
     )

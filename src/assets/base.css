@@ -2,7 +2,17 @@
 @import 'tailwindcss';
 
 @tailwind utilities;
-
+html {
+  scroll-behavior: smooth;
+}
+#goal {
+  scroll-margin-top: 150px;
+  scroll-padding-top: 1500px;
+}
+#problems {
+  scroll-margin-top: 150px;
+  scroll-padding-top: 1500px;
+}
 @layer utilities {
   .container {
     margin-inline: auto;
@@ -30,6 +40,7 @@
 }
 
 @theme {
+  --animate-fade-in: fade-in 0.7s ease-in-out forwards;
   --color-bg-primary: #fff;
   --color-blue: #273777;
   --color-light-blue: #c8d3ff;
@@ -45,9 +56,26 @@
     #c8d3ff 60%,
     rgba(124, 131, 159, 0.25) 100%
   );
+  --breakpoint-sm: 40rem; /* 640px */
+  --breakpoint-lg: 64rem; /* 1024px */
+  --breakpoint-xl: 80rem; /* 1280px */
+  --breakpoint-xxl: 90rem; /* 1440px */
+  --breakpoint-2xl: 120rem; /* 1920px */
+  --breakpoint-2xl-max: 106.875rem; /* 1710px */
   /* --color-gradient-hero: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #C8D3FF 100%); */
 
   --font-roboto: Roboto;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 /* @utility container {
   margin: 0 auto;
@@ -67,7 +95,6 @@ a {
   display: block;
 }
 body {
-  scroll-behavior: smooth;
   min-height: 100vh;
   line-height: 1;
   text-rendering: optimizeLegibility;
