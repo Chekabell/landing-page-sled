@@ -1,6 +1,6 @@
 import { defineComponent, ref } from 'vue'
 
-import Container from './Container'
+import Container from './CustomContainer'
 import Arrow from '@/assets/arrow.png'
 import Lineika from '@/assets/Lineika.png'
 import PhoneMock from '@/assets/MockUp.png'

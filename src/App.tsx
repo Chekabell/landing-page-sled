@@ -1,8 +1,6 @@
 import { defineComponent } from 'vue'
-import Container from './components/Container'
+import Container from './components/CustomContainer'
 import Sled2 from '@/assets/logo2.png'
-import Lineika from '@/assets/Lineika.png'
-import Arrow from '@/assets/arrow.png'
 import MockUp from '@/assets/MockUp.png'
 import CarouselAboutApplication from './components/CarouselAboutApplication'
 import Header from './components/Header'
@@ -103,9 +101,7 @@ export default defineComponent({
           </section>
 
           <ProblemSolution />
-          <Container>
-            <CarouselAboutApplication />
-          </Container>
+          <CarouselAboutApplication />
         </main>
       </div>
     )

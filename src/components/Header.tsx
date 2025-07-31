@@ -1,5 +1,5 @@
 import { defineComponent, ref } from 'vue'
-import Container from './Container'
+import Container from './CustomContainer'
 import Sled from '@/assets/logo.svg'
 
 export default defineComponent({
