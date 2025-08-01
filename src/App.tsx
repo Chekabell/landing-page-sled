@@ -5,6 +5,7 @@ import MockUp from '@/assets/MockUp.png'
 import CarouselAboutApplication from './components/CarouselAboutApplication'
 import Header from './components/Header'
 import ProblemSolution from './components/ProblemSolution'
+import AchievementsSection from './components/AchievementsSection'
 
 export default defineComponent({
   setup() {
@@ -102,6 +103,7 @@ export default defineComponent({
 
           <ProblemSolution />
           <CarouselAboutApplication />
+          <AchievementsSection />
         </main>
       </div>
     )

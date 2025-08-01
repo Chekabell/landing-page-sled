@@ -195,30 +195,29 @@ export default defineComponent({
     const registerHorizontalSwiper = (swiper: SwiperType) => {
       horizontalSwipers.value.push(swiper)
 
-      // Настроим контроллер для нового свайпера
       swiper.controller.control = horizontalSwipers.value.filter((s) => s !== swiper)
     }
 
     // Методы управления
     const goNextHorizontal = () => {
       horizontalSwipers.value[0]?.slideNext()
-      horizontalSwipers.value[1]?.slideNext()
     }
 
     const goPrevHorizontal = () => {
       horizontalSwipers.value[0]?.slidePrev()
-      horizontalSwipers.value[1]?.slidePrev()
     }
 
     const goToHorizontal = (index: number) => {
       horizontalSwipers.value[0]?.slideTo(index)
-      horizontalSwipers.value[1]?.slideTo(index)
     }
 
     return () => (
-      <div class="container h-screen flex flex-col relative">
-        <div class="flex flex-row h-[90vh]">
-          <div class="flex flex-col justify-center">
+      <div class="container py-5 h-screen flex flex-col relative">
+        <h2 class="w-full text-center text-[clamp(24px,2.5vw+0.5rem,3.125rem)] text-blue font-semibold uppercase">
+          Основные функции приложения
+        </h2>
+        <div class="flex flex-row sm:h-[80vh] lg:h-[90vh]">
+          <div class="flex flex-col justify-center sm:hidden lg:flex">
             <div
               class="w-11 h-11 flex justify-center items-center rounded-full top-[50%]"
               style="border: 1px solid #F1F1F1; box-shadow: 0px 1px 215px 0px #00000040;"
@@ -232,7 +231,7 @@ export default defineComponent({
               </svg>
             </div>
           </div>
-          <div class="absolute bottom-20 z-[3] flex flex-row">
+          <div class="absolute sm:bottom-[80%] lg:bottom-[15%] z-[3] flex flex-row">
             {/* AndroidButton */}
             <div
               onClick={() => toggleOS(true)}
@@ -270,13 +269,16 @@ export default defineComponent({
               </svg>
             </div>
           </div>
-          <Swiper direction="vertical" onSwiper={handleSwiperInit}>
+          <Swiper direction="vertical" allowTouchMove={false} onSwiper={handleSwiperInit}>
             <SwiperSlide>
               <Swiper
+                class="h-full"
                 modules={[Controller]}
-                spaceBetween={30}
                 onSwiper={registerHorizontalSwiper}
-                onSlideChange={(swiper) => (currentHorizontalIndex.value = swiper.activeIndex)}
+                onSlideChange={(swiper) => {
+                  horizontalSwipers.value[1]?.slideTo(swiper.activeIndex)
+                  currentHorizontalIndex.value = swiper.activeIndex
+                }}
               >
                 {androidSlides.map((slide) => (
                   <SwiperSlide key={slide.id}>{slide.content}</SwiperSlide>
@@ -285,10 +287,13 @@ export default defineComponent({
             </SwiperSlide>
             <SwiperSlide>
               <Swiper
+                class="h-full"
                 modules={[Controller]}
-                spaceBetween={30}
                 onSwiper={registerHorizontalSwiper}
-                onSlideChange={(swiper) => (currentHorizontalIndex.value = swiper.activeIndex)}
+                onSlideChange={(swiper) => {
+                  horizontalSwipers.value[0]?.slideTo(swiper.activeIndex)
+                  currentHorizontalIndex.value = swiper.activeIndex
+                }}
               >
                 {iOSSlides.map((slide) => (
                   <SwiperSlide key={slide.id}>{slide.content}</SwiperSlide>
@@ -296,7 +301,7 @@ export default defineComponent({
               </Swiper>
             </SwiperSlide>
           </Swiper>
-          <div class="flex flex-col justify-center">
+          <div class="flex-col justify-center sm:hidden lg:flex">
             <div
               class="min-w-11 h-11 flex justify-center items-center rounded-full top-[50%] "
               style="border: 1px solid #F1F1F1; box-shadow: 0px 1px 215px 0px #00000040;"
@@ -312,7 +317,7 @@ export default defineComponent({
           </div>
         </div>
         {/* Общая пагинация горизонтальных слайдеров */}
-        <div class="custom-pagination mt-6">
+        <div class="custom-pagination">
           {androidSlides.map((_, index) => (
             <button
               class={{ active: index === currentHorizontalIndex.value }}
@@ -332,17 +337,17 @@ const Slide = defineComponent({
   },
   setup(props) {
     return () => (
-      <div class="h-full flex flex-col">
-        <div class="relative justify-center flex flex-row">
+      <div class="h-full flex flex-col justify-center">
+        <div class="sm:h-[40%] lg:h-[70%] flex flex-row justify-center">
           <div
-            class="absolute rounded-full h-95 w-95 top-10 z-[-1]"
-            style="background: linear-gradient(180deg, #C8D3FF 0%, rgba(255, 255, 255, 0) 100%);"
+            class="absolute aspect-square sm:w-[50%] lg: w-[60%] z-[-1] sm:top-[35%] lg:top-[25%] rounded-full"
+            style="background: linear-gradient(180deg, #C8D3FF 0%, rgba(255, 255, 255, 0) 80%);"
           />
           {props.images?.map((image) => (
-            <img class="h-90 object-cover" src={image}></img>
+            <img class="max-w-[33%] object-contain" src={image}></img>
           ))}
         </div>
-        <div class="px-10 pt-5 text-center">{props.text}</div>
+        <p class="text-center w-full font-normal lg:px-12 text-[1rem]">{props.text}</p>
       </div>
     )
   },

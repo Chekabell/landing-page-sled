@@ -5,6 +5,7 @@ import Arrow from '@/assets/arrow.png'
 import Lineika from '@/assets/Lineika.png'
 import PhoneMock from '@/assets/MockUp.png'
 import Phone from '@/assets/Phone.png'
+
 export default defineComponent({
   setup() {
     const activeSection = ref<'problem' | 'solution'>('problem')
