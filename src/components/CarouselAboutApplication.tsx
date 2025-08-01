@@ -273,6 +273,11 @@ export default defineComponent({
             <SwiperSlide>
               <Swiper
                 class="h-full"
+                breakpoints={{
+                  1024: {
+                    allowTouchMove: false,
+                  },
+                }}
                 modules={[Controller]}
                 onSwiper={registerHorizontalSwiper}
                 onSlideChange={(swiper) => {
@@ -288,6 +293,11 @@ export default defineComponent({
             <SwiperSlide>
               <Swiper
                 class="h-full"
+                breakpoints={{
+                  1024: {
+                    allowTouchMove: false,
+                  },
+                }}
                 modules={[Controller]}
                 onSwiper={registerHorizontalSwiper}
                 onSlideChange={(swiper) => {
@@ -338,16 +348,18 @@ const Slide = defineComponent({
   setup(props) {
     return () => (
       <div class="h-full flex flex-col justify-center">
-        <div class="sm:h-[40%] lg:h-[70%] flex flex-row justify-center">
+        <div class="sm:h-[50%] lg:h-[70%] flex flex-row justify-center">
           <div
-            class="absolute aspect-square sm:w-[50%] lg: w-[60%] z-[-1] sm:top-[35%] lg:top-[25%] rounded-full"
+            class="absolute aspect-square sm:w-[50%] lg:w-[60%] z-[-1] sm:top-[35%] lg:top-[25%] rounded-full"
             style="background: linear-gradient(180deg, #C8D3FF 0%, rgba(255, 255, 255, 0) 80%);"
           />
           {props.images?.map((image) => (
             <img class="max-w-[33%] object-contain" src={image}></img>
           ))}
         </div>
-        <p class="text-center w-full font-normal lg:px-12 text-[1rem]">{props.text}</p>
+        <p class="text-center w-full font-normal lg:px-12 text-[clamp(16px,2.5vw+0.5rem,1rem)]">
+          {props.text}
+        </p>
       </div>
     )
   },
