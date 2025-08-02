@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
 
 @tailwind utilities;
@@ -65,7 +65,8 @@ html {
   --breakpoint-2xl-max: 106.875rem; /* 1710px */
   /* --color-gradient-hero: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #C8D3FF 100%); */
 
-  --font-roboto: Roboto;
+  --font-roboto: 'Roboto';
+  --font-roboto-condensed: 'Roboto Condensed';
 
   @keyframes fade-in {
     from {
