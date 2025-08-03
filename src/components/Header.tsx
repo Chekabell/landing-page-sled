@@ -17,7 +17,7 @@ export default defineComponent({
     return () => (
       <>
         <header
-          class="fixed top-0  z-10 w-full py-[1.667rem]  bg-white/70 dark:bg-black/50 backdrop-blur-[10px] overflow-hidden"
+          class="!fixed top-0  z-10 w-full py-[1.667rem]  bg-white/70 dark:bg-black/50 backdrop-blur-[10px] overflow-hidden"
           style={{
             background:
               'radial-gradient(circle at right, white 0%, #C8D3FF 60%, rgba(124, 131, 159, 0.25) 100%)',
