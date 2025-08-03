@@ -72,16 +72,17 @@ export default defineComponent({
           </section>
 
           <ProblemSolution />
-          <div class="my-15">
+          <section id="audience" class="my-15">
             <TargetGroup />
-          </div>
-          <section class="sm:h-[80vh] lg:h-screen">
+          </section>
+          <section id="about" class="sm:h-[80vh] lg:h-screen">
             <CarouselAboutApplication />
           </section>
-          <section class="h-screen my-2">
+          <section
+            id="advantages"
+            class="sm:my-10 lg:my-15 xl:my-40 flex justify-center flex-col sm:gap-10 lg:gap-20 xl:gap-50 scroll-margin-top"
+          >
             <AchievementsSectionBegin />
-          </section>
-          <section class="my-10">
             <AchievementsSectionContinue />
           </section>
         </main>
