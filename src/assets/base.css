@@ -54,7 +54,12 @@ html {
 
 @theme {
   --animate-fade-in: fade-in 0.7s ease-in-out forwards;
-  --color-bg-primary: #fff;
+  --color-primary: #ffffff;
+  --color-tretiary-hover: #ededed;
+  --color-tretiary-focused: #dbdbdb;
+  --color-segment-control-hover: #ededed;
+  --color-segment-control-focused: #ced8ff;
+  --color-segment-control-active: #273777;
   --color-blue: #273777;
   --color-light-blue: #c8d3ff;
   --color-text-blue: #273777;
