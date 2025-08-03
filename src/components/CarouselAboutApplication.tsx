@@ -6,6 +6,7 @@ import type { Swiper as SwiperType } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+import CustomContainer from './CustomContainer'
 
 export default defineComponent({
   components: {
@@ -212,12 +213,12 @@ export default defineComponent({
     }
 
     return () => (
-      <div class="container py-5 h-screen flex flex-col relative" id="about">
-        <h2 class="w-full text-center text-[clamp(24px,2.5vw+0.5rem,3.125rem)] text-blue font-semibold uppercase">
+      <CustomContainer class="relative flex flex-col h-[100%]">
+        <h2 class="text-center text-[clamp(24px,2.5vw+0.5rem,3.125rem)] h-[8%] flex justify-center items-center text-blue font-semibold uppercase">
           Основные функции приложения
         </h2>
-        <div class="flex flex-row sm:h-[80vh] lg:h-[90vh]">
-          <div class="flex flex-col justify-center sm:hidden lg:flex">
+        <div class="flex flex-row h-[84%]">
+          <div class="flex flex-col justify-center sm:hidden lg:flex cursor-pointer">
             <div
               class="w-11 h-11 flex justify-center items-center rounded-full top-[50%]"
               style="border: 1px solid #F1F1F1; box-shadow: 0px 1px 215px 0px #00000040;"
@@ -269,7 +270,12 @@ export default defineComponent({
               </svg>
             </div>
           </div>
-          <Swiper direction="vertical" allowTouchMove={false} onSwiper={handleSwiperInit}>
+          <Swiper
+            class="h-[100%]"
+            direction="vertical"
+            allowTouchMove={false}
+            onSwiper={handleSwiperInit}
+          >
             <SwiperSlide>
               <Swiper
                 class="h-full"
@@ -313,7 +319,7 @@ export default defineComponent({
           </Swiper>
           <div class="flex-col justify-center sm:hidden lg:flex">
             <div
-              class="min-w-11 h-11 flex justify-center items-center rounded-full top-[50%] "
+              class="min-w-11 h-11 flex justify-center items-center rounded-full top-[50%] cursor-pointer"
               style="border: 1px solid #F1F1F1; box-shadow: 0px 1px 215px 0px #00000040;"
               onClick={goNextHorizontal}
             >
@@ -327,7 +333,7 @@ export default defineComponent({
           </div>
         </div>
         {/* Общая пагинация горизонтальных слайдеров */}
-        <div class="custom-pagination">
+        <div class="custom-pagination h-[8%] flex justify-center items-center">
           {androidSlides.map((_, index) => (
             <button
               class={{ active: index === currentHorizontalIndex.value }}
@@ -335,7 +341,7 @@ export default defineComponent({
             />
           ))}
         </div>
-      </div>
+      </CustomContainer>
     )
   },
 })
@@ -348,16 +354,18 @@ const Slide = defineComponent({
   setup(props) {
     return () => (
       <div class="h-full flex flex-col justify-center">
-        <div class="sm:h-[50%] lg:h-[70%] flex flex-row justify-center">
+        <div class="sm:h-[65%] lg:h-[70%] xl:h-[80%] xxl:h-[90%] flex flex-row justify-center items-center">
           <div
-            class="absolute aspect-square sm:w-[50%] lg:w-[60%] z-[-1] sm:top-[35%] lg:top-[25%] rounded-full"
+            class="absolute aspect-square sm:w-[60%] lg:w-[55%] xxl:w-[55%] 2xl:w-[45%] z-[-1] top-[30%] rounded-full"
             style="background: linear-gradient(180deg, #C8D3FF 0%, rgba(255, 255, 255, 0) 80%);"
           />
-          {props.images?.map((image) => (
-            <img class="max-w-[33%] object-contain" src={image}></img>
-          ))}
+          <div class="flex justify-center items-center w-full h-full">
+            {props.images?.map((image) => (
+              <img class="max-w-[33%] max-h-full object-contain" src={image} />
+            ))}
+          </div>
         </div>
-        <p class="text-center w-full font-normal lg:px-12 text-[clamp(16px,2.5vw+0.5rem,1rem)]">
+        <p class="text-center w-full font-normal lg:px-12 text-[clamp(24px,2.5vw+0.5rem,1rem)]">
           {props.text}
         </p>
       </div>

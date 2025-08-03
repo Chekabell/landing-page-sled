@@ -6,6 +6,8 @@ import CarouselAboutApplication from './components/CarouselAboutApplication'
 import Header from './components/Header'
 import ProblemSolution from './components/ProblemSolution'
 import AchievementsSectionBegin from './components/AchievementsSectionBegin'
+import AchievementsSectionContinue from './components/AchievementsSectionContinue'
+import TargetGroup from './components/TargetGroup'
 
 export default defineComponent({
   setup() {
@@ -70,8 +72,18 @@ export default defineComponent({
           </section>
 
           <ProblemSolution />
-          <CarouselAboutApplication />
-          <AchievementsSectionBegin />
+          <div class="my-15">
+            <TargetGroup />
+          </div>
+          <section class="sm:h-[80vh] lg:h-screen">
+            <CarouselAboutApplication />
+          </section>
+          <section class="h-screen my-2">
+            <AchievementsSectionBegin />
+          </section>
+          <section class="my-10">
+            <AchievementsSectionContinue />
+          </section>
         </main>
         <footer class={'bg-[#273777]'}>
           <Container>
