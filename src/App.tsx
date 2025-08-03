@@ -75,12 +75,12 @@ export default defineComponent({
           <section id="audiens" class="my-15 scroll-mt-80">
             <TargetGroup />
           </section>
-          <section id="about" class="sm:h-[80vh] lg:h-screen">
+          <section id="about" class="h-[80vh] lg:h-screen">
             <CarouselAboutApplication />
           </section>
           <section
             id="advantages"
-            class="sm:my-10 lg:my-15 xl:my-40 flex justify-center flex-col sm:gap-10 lg:gap-20 xl:gap-50 scroll-mt-40"
+            class="flex justify-center flex-col gap-10 lg:gap-20 xl:gap-50 scroll-mt-5 lg:scroll-mt-[-0.5rem] xl:scroll-mt-3 2xl:scroll-mt-15"
           >
             <AchievementsSectionBegin />
             <AchievementsSectionContinue />

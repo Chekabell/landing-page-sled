@@ -219,9 +219,9 @@ export default defineComponent({
           Основные функции приложения
         </h2>
         <div class="flex flex-row h-[84%]">
-          <div class="flex flex-col justify-center sm:hidden lg:flex cursor-pointer">
+          <div class="hidden lg:flex lg:flex-col lg:justify-center">
             <div
-              class="w-11 h-11 flex justify-center items-center rounded-full top-[50%]"
+              class="w-11 h-11 flex justify-center items-center rounded-full top-[50%] cursor-pointer"
               style="border: 1px solid #F1F1F1; box-shadow: 0px 1px 215px 0px #00000040;"
               onClick={goPrevHorizontal}
             >
@@ -233,7 +233,7 @@ export default defineComponent({
               </svg>
             </div>
           </div>
-          <div class="absolute sm:bottom-[80%] lg:bottom-[15%] z-[3] flex flex-row">
+          <div class="absolute bottom-[80%] lg:bottom-[15%] z-[3] flex flex-row">
             {/* AndroidButton */}
             <div
               onClick={() => toggleOS(true)}
@@ -318,7 +318,7 @@ export default defineComponent({
               </Swiper>
             </SwiperSlide>
           </Swiper>
-          <div class="flex-col justify-center sm:hidden lg:flex">
+          <div class="hidden lg:flex lg:flex-col lg:justify-center">
             <div
               class="min-w-11 h-11 flex justify-center items-center rounded-full top-[50%] cursor-pointer"
               style="border: 1px solid #F1F1F1; box-shadow: 0px 1px 215px 0px #00000040;"
@@ -355,9 +355,9 @@ const Slide = defineComponent({
   setup(props) {
     return () => (
       <div class="h-full flex flex-col justify-center">
-        <div class="sm:h-[65%] lg:h-[70%] xl:h-[80%] xxl:h-[90%] flex flex-row justify-center items-center">
+        <div class="h-[65%] lg:h-[70%] xl:h-[80%] xxl:h-[90%] flex flex-row justify-center items-center">
           <div
-            class="absolute aspect-square sm:w-[60%] lg:w-[55%] xxl:w-[55%] 2xl:w-[45%] z-[-1] top-[30%] rounded-full"
+            class="absolute aspect-square w-[60%] lg:w-[55%] xxl:w-[55%] 2xl:w-[45%] z-[-1] top-[30%] rounded-full"
             style="background: linear-gradient(180deg, #C8D3FF 0%, rgba(255, 255, 255, 0) 80%);"
           />
           <div class="flex justify-center items-center w-full h-full">

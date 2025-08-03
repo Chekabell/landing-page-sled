@@ -7,9 +7,9 @@ import CustomContainer from './CustomContainer'
 export default defineComponent({
   setup() {
     return () => (
-      <CustomContainer class="h-[100%] flex items-center">
-        <img class="sm:hidden lg:block absolute h-[100%] left-0 z-[-1]" src={LeftPattern} />
-        <div class="w-full sm:bg-white sm:py-3 sm:px-3 sm:border-1 sm:rounded-[30px] lg:bg-transparent lg:border-0 lg:px-40 flex flex-col gap-6">
+      <CustomContainer class="sm:my-30 lg:my-20 xl:my-30 h-[100%] flex items-center">
+        <img class="hidden sm:block absolute h-[100%] left-0 z-[-1]" src={LeftPattern} />
+        <div class="w-full bg-white py-3 px-3 border-1 rounded-[30px] lg:bg-transparent lg:border-0 lg:px-40 flex flex-col gap-6">
           <h2 class="text-center text-[clamp(24px,2.5vw+0.5rem,3.125rem)] text-blue font-semibold uppercase">
             Достижения
           </h2>
@@ -27,7 +27,7 @@ export default defineComponent({
             получил одобрение со стороны эксперта на реализацию
           </p>
         </div>
-        <img class="sm:hidden lg:block absolute h-[100%] right-0 z-[-1]" src={RightPattern} />
+        <img class="hidden sm:block absolute h-[100%] right-0 z-[-1]" src={RightPattern} />
       </CustomContainer>
     )
   },
