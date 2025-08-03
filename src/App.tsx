@@ -8,12 +8,13 @@ import ProblemSolution from './components/ProblemSolution'
 import AchievementsSectionBegin from './components/AchievementsSectionBegin'
 import AchievementsSectionContinue from './components/AchievementsSectionContinue'
 import TargetGroup from './components/TargetGroup'
-
+import CustomContainer from './components/CustomContainer'
+import Video from '@/assets/video.mp4'
 export default defineComponent({
   setup() {
     return () => (
       <div class={'flex flex-col min-h-dvh overflow-hidden'}>
-        <main>
+        <main class={'mb-[20px]'}>
           <Header />
 
           <section
@@ -25,7 +26,7 @@ export default defineComponent({
           >
             <div class="flex flex-1 items-center">
               <div class={'container mx-auto'}>
-                <div class="flex flex-col lg:flex-row  lg:items-center  relative ">
+                <div class="flex flex-col lg:flex-row  lg:items-center items-center relative ">
                   <div class="flex flex-col gap-[1.5rem]">
                     <img class={'max-w-[400px] h-[101px]'} src={Sled2} alt="След" />
                     <h1
@@ -77,6 +78,29 @@ export default defineComponent({
           </section>
           <section id="about" class="h-[80vh] lg:h-screen">
             <CarouselAboutApplication />
+          </section>
+          <section class={'py-[50px]'}>
+            <CustomContainer>
+              <div class="flex flex-col items-center ">
+                <div class="w-full bg-white py-3 px-3  lg:px-40 flex flex-col gap-6">
+                  <h2 class="text-center text-[clamp(24px,2.5vw+0.5rem,3.125rem)] text-blue font-semibold uppercase">
+                    Обзор функционала приложения
+                  </h2>
+                </div>
+
+                <div class="w-full max-w-[960px] aspect-video rounded-2xl overflow-hidden shadow-lg">
+                  <video
+                    controls
+                    preload="metadata"
+                    muted
+                    class="w-full h-full object-cover"
+                    src={Video}
+                  >
+                    Ваш браузер не поддерживает видео.
+                  </video>
+                </div>
+              </div>
+            </CustomContainer>
           </section>
           <section
             id="advantages"

@@ -233,7 +233,7 @@ export default defineComponent({
               </svg>
             </div>
           </div>
-          <div class="absolute bottom-[80%] lg:bottom-[15%] z-[3] flex flex-row">
+          <div class="absolute bottom-[-37px] lg:bottom-[15%] z-[3] flex flex-row">
             {/* AndroidButton */}
             <div
               onClick={() => toggleOS(true)}
