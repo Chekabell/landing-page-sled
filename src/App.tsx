@@ -72,7 +72,7 @@ export default defineComponent({
           </section>
 
           <ProblemSolution />
-          <section id="audience" class="my-15">
+          <section id="audiens" class="my-15 scroll-mt-80">
             <TargetGroup />
           </section>
           <section id="about" class="sm:h-[80vh] lg:h-screen">
@@ -80,7 +80,7 @@ export default defineComponent({
           </section>
           <section
             id="advantages"
-            class="sm:my-10 lg:my-15 xl:my-40 flex justify-center flex-col sm:gap-10 lg:gap-20 xl:gap-50 scroll-margin-top"
+            class="sm:my-10 lg:my-15 xl:my-40 flex justify-center flex-col sm:gap-10 lg:gap-20 xl:gap-50 scroll-mt-40"
           >
             <AchievementsSectionBegin />
             <AchievementsSectionContinue />
