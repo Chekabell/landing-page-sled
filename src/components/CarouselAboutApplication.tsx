@@ -212,7 +212,7 @@ export default defineComponent({
     }
 
     return () => (
-      <div class="container py-5 h-screen flex flex-col relative">
+      <div class="container py-5 h-screen flex flex-col relative" id="about">
         <h2 class="w-full text-center text-[clamp(24px,2.5vw+0.5rem,3.125rem)] text-blue font-semibold uppercase">
           Основные функции приложения
         </h2>

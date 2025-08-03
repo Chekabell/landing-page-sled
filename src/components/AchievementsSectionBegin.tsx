@@ -4,7 +4,7 @@ import Logo from '@/assets/FondInnovationLogo.svg'
 export default defineComponent({
   setup() {
     return () => (
-      <section class="h-screen my-3 flex items-center">
+      <section class="h-screen my-3 flex items-center" id="advantages">
         <svg
           width="204"
           height="896"

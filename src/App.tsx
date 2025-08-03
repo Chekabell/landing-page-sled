@@ -13,39 +13,7 @@ export default defineComponent({
       <div class={'flex flex-col min-h-dvh overflow-hidden'}>
         <main>
           <Header />
-          {/* <header
-            class={
-              'fixed top-0 w-full py-[1.667rem] z-10 bg-blur backdrop-blur-[10px]   overflow-hidden '
-            }
-          >
-            <Container>
-              <div class="flex justify-between">
-                <img src={Sled} alt="След" />
-                <nav class={'flex items-center'}>
-                  <ul class={'flex gap-[3.5rem]'}>
-                    <li>
-                      <a href="#goal">Цель</a>
-                    </li>
-                    <li>
-                      <a href="#problems">Проблемы</a>
-                    </li>
-                    <li>
-                      <a href="#audiens">Аудитория</a>
-                    </li>
-                    <li>
-                      <a href="#about">О приложении</a>
-                    </li>
-                    <li>
-                      <a href="#advantages">Достижения</a>
-                    </li>
-                    <li>
-                      <a href="#contacts">Контакты</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </Container>
-          </header> */}
+
           <section
             class={'flex flex-col min-h-[962px] relative py-[156px]  lg:py-[106px] bg-gradient'}
             style={{
@@ -105,6 +73,13 @@ export default defineComponent({
           <CarouselAboutApplication />
           <AchievementsSectionBegin />
         </main>
+        <footer class={'bg-[#273777]'}>
+          <Container>
+            <div class="flex items-center justify-center py-[28px]">
+              <h2 class={'text-[32px] text-white font-normal leading-[100%]'}>© 2025</h2>
+            </div>
+          </Container>
+        </footer>
       </div>
     )
   },
