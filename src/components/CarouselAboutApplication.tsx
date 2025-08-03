@@ -2,6 +2,31 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Controller } from 'swiper/modules'
 import { defineComponent, ref } from 'vue'
 import type { Swiper as SwiperType } from 'swiper'
+import Android1 from '@/assets/image/carousel/Android/1.png'
+import Android2_1 from '@/assets/image/carousel/Android/2-1.png'
+import Android2_2 from '@/assets/image/carousel/Android/2-2.png'
+import Android2_3 from '@/assets/image/carousel/Android/2-3.png'
+import Android3 from '@/assets/image/carousel/Android/3.png'
+import Android4_1 from '@/assets/image/carousel/Android/4-1.png'
+import Android4_2 from '@/assets/image/carousel/Android/4-2.png'
+import Android4_3 from '@/assets/image/carousel/Android/4-3.png'
+import Android5_1 from '@/assets/image/carousel/Android/5-1.png'
+import Android5_2 from '@/assets/image/carousel/Android/5-2.png'
+import Android5_3 from '@/assets/image/carousel/Android/5-3.png'
+import Android6 from '@/assets/image/carousel/Android/6.png'
+
+import iOS1 from '@/assets/image/carousel/iOS/1.png'
+import iOS2_1 from '@/assets/image/carousel/iOS/2-1.png'
+import iOS2_2 from '@/assets/image/carousel/iOS/2-2.png'
+import iOS2_3 from '@/assets/image/carousel/iOS/2-3.png'
+import iOS3 from '@/assets/image/carousel/iOS/3.png'
+import iOS4_1 from '@/assets/image/carousel/iOS/4-1.png'
+import iOS4_2 from '@/assets/image/carousel/iOS/4-2.png'
+import iOS4_3 from '@/assets/image/carousel/iOS/4-3.png'
+import iOS5_1 from '@/assets/image/carousel/iOS/5-1.png'
+import iOS5_2 from '@/assets/image/carousel/iOS/5-2.png'
+import iOS5_3 from '@/assets/image/carousel/iOS/5-3.png'
+import iOS6 from '@/assets/image/carousel/iOS/6.png'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -19,7 +44,7 @@ export default defineComponent({
         id: 1,
         content: (
           <Slide
-            images={['/src/assets/image/carousel/Android/1.png']}
+            images={[Android1]}
             text="Ключевыми функциями приложения SLED являются создание 3D-модели следа обуви и
             анализ параметров следа обуви c помощью использования Искусственного интеллекта."
           />
@@ -29,11 +54,7 @@ export default defineComponent({
         id: 2,
         content: (
           <Slide
-            images={[
-              '/src/assets/image/carousel/Android/2-1.png',
-              '/src/assets/image/carousel/Android/2-2.png',
-              '/src/assets/image/carousel/Android/2-3.png',
-            ]}
+            images={[Android2_1, Android2_2, Android2_3]}
             text="При использовании приложения, сотруднику правоохранительных органов необходимо произвести
             фотосъемку следа обуви c 5 разных ракурсов в количестве 5 изображений."
           />
@@ -43,7 +64,7 @@ export default defineComponent({
         id: 3,
         content: (
           <Slide
-            images={['/src/assets/image/carousel/Android/3.png']}
+            images={[Android3]}
             text="Далее после загрузки 5 изображений выпадет окно на выбора одной
             из двух предложенных функций  приложения."
           />
@@ -53,11 +74,7 @@ export default defineComponent({
         id: 4,
         content: (
           <Slide
-            images={[
-              '/src/assets/image/carousel/Android/4-1.png',
-              '/src/assets/image/carousel/Android/4-2.png',
-              '/src/assets/image/carousel/Android/4-3.png',
-            ]}
+            images={[Android4_1, Android4_2, Android4_3]}
             text='В случае выбора функции "3D-модель" на основании выбранных изображений будет создана 3D-модель,
             файл которой можно будет скачать на устройство для дальнейшего её использования
             (формат файла  OBJ, STL и PLY).'
@@ -68,11 +85,7 @@ export default defineComponent({
         id: 5,
         content: (
           <Slide
-            images={[
-              '/src/assets/image/carousel/Android/5-1.png',
-              '/src/assets/image/carousel/Android/5-2.png',
-              '/src/assets/image/carousel/Android/5-3.png',
-            ]}
+            images={[Android5_1, Android5_2, Android5_3]}
             text='В случае выбора функции "Искусственный интеллект" на основании выбранных изображений после их
             анализа будут выведены данные параметров следа обуви, которые можно сканировать или скачать файлом
             (формат файла TXT, DOC и PDF), и  ссылка обуви, с которой было обнаружено сходство с следом.'
@@ -83,7 +96,7 @@ export default defineComponent({
         id: 6,
         content: (
           <Slide
-            images={['/src/assets/image/carousel/Android/6.png']}
+            images={[Android6]}
             text="Все созданные  3D-модели и данные ИИ будут сохранятся в истории приложения для
             использования их по необходимости."
           />
@@ -96,7 +109,7 @@ export default defineComponent({
         id: 1,
         content: (
           <Slide
-            images={['/src/assets/image/carousel/iOS/1.png']}
+            images={[iOS1]}
             text="Ключевыми функциями приложения SLED являются создание 3D-модели следа обуви и
             анализ параметров следа обуви c помощью использования Искусственного интеллекта."
           />
@@ -106,11 +119,7 @@ export default defineComponent({
         id: 2,
         content: (
           <Slide
-            images={[
-              '/src/assets/image/carousel/iOS/2-1.png',
-              '/src/assets/image/carousel/iOS/2-2.png',
-              '/src/assets/image/carousel/iOS/2-3.png',
-            ]}
+            images={[iOS2_1, iOS2_2, iOS2_3]}
             text="При использовании приложения, сотруднику правоохранительных органов необходимо произвести
             фотосъемку следа обуви c 5 разных ракурсов в количестве 5 изображений."
           />
@@ -120,7 +129,7 @@ export default defineComponent({
         id: 3,
         content: (
           <Slide
-            images={['/src/assets/image/carousel/iOS/3.png']}
+            images={[iOS3]}
             text="Далее после загрузки 5 изображений выпадет окно на выбора одной
             из двух предложенных функций  приложения."
           />
@@ -130,11 +139,7 @@ export default defineComponent({
         id: 4,
         content: (
           <Slide
-            images={[
-              '/src/assets/image/carousel/iOS/4-1.png',
-              '/src/assets/image/carousel/iOS/4-2.png',
-              '/src/assets/image/carousel/iOS/4-3.png',
-            ]}
+            images={[iOS4_1, iOS4_2, iOS4_3]}
             text='В случае выбора функции "3D-модель" на основании выбранных изображений будет создана 3D-модель,
             файл которой можно будет скачать на устройство для дальнейшего её использования
             (формат файла  OBJ, STL и PLY).'
@@ -145,11 +150,7 @@ export default defineComponent({
         id: 5,
         content: (
           <Slide
-            images={[
-              '/src/assets/image/carousel/iOS/5-1.png',
-              '/src/assets/image/carousel/iOS/5-2.png',
-              '/src/assets/image/carousel/iOS/5-3.png',
-            ]}
+            images={[iOS5_1, iOS5_2, iOS5_3]}
             text='В случае выбора функции "Искусственный интеллект" на основании выбранных изображений после их
             анализа будут выведены данные параметров следа обуви, которые можно сканировать или скачать файлом
             (формат файла TXT, DOC и PDF), и  ссылка обуви, с которой было обнаружено сходство с следом.'
@@ -160,7 +161,7 @@ export default defineComponent({
         id: 6,
         content: (
           <Slide
-            images={['/src/assets/image/carousel/iOS/6.png']}
+            images={[iOS6]}
             text="Все созданные  3D-модели и данные ИИ будут сохранятся в истории приложения для
             использования их по необходимости."
           />
