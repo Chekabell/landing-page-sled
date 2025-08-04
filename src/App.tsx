@@ -88,7 +88,7 @@ export default defineComponent({
           <section id="audiens" class="my-15 scroll-mt-80">
             <TargetGroup />
           </section>
-          <section id="about" class="h-[80vh] my-3 lg:h-screen">
+          <section id="about" class="my-10 h-screen">
             <CarouselAboutApplication />
           </section>
           <section class={'py-[50px]'}>

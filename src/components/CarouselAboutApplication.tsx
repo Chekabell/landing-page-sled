@@ -218,7 +218,7 @@ export default defineComponent({
         <h2 class="text-center text-[clamp(24px,2.5vw+0.5rem,3.125rem)] flex justify-center items-center text-blue font-semibold uppercase">
           Основные функции приложения
         </h2>
-        <div class="flex flex-row h-[70%] my-3">
+        <div class="flex flex-row h-[80%] my-3">
           <div class="hidden lg:flex lg:flex-col lg:justify-center">
             <div
               class="w-full shadow-[0_1px_215px_0_rgba(0,0,0,0.25)] aspect-square transition-colors p-2 flex justify-center items-center rounded-full top-1/2 hover:bg-tretiary-hover active:bg-tretiary-focused cursor-pointer border-solid border-1 border-[#F1F1F1]"
@@ -232,48 +232,6 @@ export default defineComponent({
               </svg>
             </div>
           </div>
-          <CustomContainer class="absolute left-0 w-full flex justify-center lg:justify-start z-[3] gap-1 bottom-[-5%] lg:bottom-[13.5%] flex-row">
-            {/* AndroidButton */}
-            <div
-              onClick={() => toggleOS(true)}
-              aria-current={isAndroid.value}
-              class={
-                'transition-colors hover:bg-segment-control-hover active:bg-segment-control-focused aria-current:bg-segment-control-active w-11 h-11 flex justify-center items-center rounded-[13px] cursor-pointer'
-              }
-            >
-              <svg width="48" height="31" viewBox="0 0 48 31" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  class="transition-colors"
-                  d="M47.2758 26.0686C46.7246 20.5328 43.9791 15.4546 40.0118 11.6492C39.2754 10.9426 39.0839 9.84647 39.6075 8.97173L42.7063 3.80627C43.3108 2.79745 42.9851 1.49065 41.9763 0.886207C40.9675 0.281762 39.6607 0.609524 39.0562 1.61622L36.2447 6.30067C35.6892 7.2265 34.5186 7.61172 33.546 7.14136C30.5322 5.6792 27.2333 4.84064 23.8535 4.84064C20.4737 4.84064 17.1748 5.6792 14.1611 7.14136C13.1906 7.61172 12.0178 7.2265 11.4623 6.30067L8.65082 1.61622C8.04637 0.611652 6.7417 0.281762 5.73074 0.888335C4.72404 1.49278 4.39627 2.79957 5.00285 3.8084L8.10171 8.97386C8.62528 9.8486 8.43373 10.9447 7.69732 11.6513C3.73011 15.4567 0.984553 20.5349 0.433314 26.0707C0.171528 28.6864 1.04415 30.3806 3.50025 30.3806H44.2068C46.6629 30.3806 47.5355 28.6864 47.2758 26.0686ZM14.276 23.9956C12.5137 23.9956 11.0835 22.5654 11.0835 20.8031C11.0835 19.0408 12.5137 17.6106 14.276 17.6106C16.0383 17.6106 17.4685 19.0408 17.4685 20.8031C17.4685 22.5654 16.0383 23.9956 14.276 23.9956ZM33.431 23.9956C31.6688 23.9956 30.2385 22.5654 30.2385 20.8031C30.2385 19.0408 31.6688 17.6106 33.431 17.6106C35.1933 17.6106 36.6235 19.0408 36.6235 20.8031C36.6235 22.5654 35.1933 23.9956 33.431 23.9956Z"
-                  fill={
-                    isAndroid.value ? 'var(--color-primary)' : 'var(--color-segment-control-active)'
-                  }
-                />
-              </svg>
-            </div>
-            {/* iOSButton */}
-            <div
-              onClick={() => toggleOS(false)}
-              aria-current={!isAndroid.value}
-              class="transition-colors hover:bg-segment-control-hover active:bg-segment-control-focused aria-current:bg-segment-control-active w-11 h-11 flex justify-center items-center rounded-[13px] cursor-pointer"
-            >
-              <svg
-                width="37"
-                height="45"
-                viewBox="0 0 37 45"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  class="transition-colors"
-                  d="M35.2422 15.125C35.0471 15.2475 30.4021 17.8311 30.4021 23.5595C30.621 30.0924 36.2638 32.3835 36.3606 32.3835C36.2638 32.5059 35.5087 35.5045 33.2719 38.6477C31.4967 41.3553 29.5264 44.0852 26.5345 44.0852C23.6885 44.0852 22.6669 42.2807 19.3831 42.2807C15.8565 42.2807 14.8587 44.0852 12.1587 44.0852C9.16674 44.0852 7.0505 41.2091 5.17857 38.5269C2.74663 35.0164 0.679571 29.5073 0.606597 24.2177C0.557419 21.4147 1.09362 18.6594 2.45474 16.3191C4.37585 13.0518 7.80562 10.8339 11.5511 10.7607C14.4209 10.6637 16.9749 12.7354 18.7263 12.7354C20.4047 12.7354 23.5426 10.7607 27.0929 10.7607C28.6254 10.7623 32.7119 11.225 35.2422 15.125ZM18.4836 10.2011C17.9728 7.64134 19.3831 5.08158 20.6966 3.44875C22.375 1.47408 25.0259 0.133789 27.3118 0.133789C27.4578 2.69354 26.5329 5.20401 24.8799 7.0324C23.3966 9.00707 20.8426 10.4936 18.4836 10.2011Z"
-                  fill={
-                    isAndroid.value ? 'var(--color-segment-control-active)' : 'var(--color-primary)'
-                  }
-                />
-              </svg>
-            </div>
-          </CustomContainer>
           <Swiper
             class="h-full !touch-pan-y"
             direction="vertical"
@@ -344,6 +302,48 @@ export default defineComponent({
             />
           ))}
         </div>
+        <CustomContainer class="absolute left-0 bottom-[-4rem] w-full flex flex-row justify-center sm:justify-start sm:bottom-5 lg:bottom-30 lg:justify-start z-[3] gap-1">
+          {/* AndroidButton */}
+          <div
+            onClick={() => toggleOS(true)}
+            aria-current={isAndroid.value}
+            class={
+              'w-11 h-11 transition-colors hover:bg-segment-co  ntrol-hover active:bg-segment-control-focused aria-current:bg-segment-control-active flex justify-center items-center rounded-[13px] cursor-pointer'
+            }
+          >
+            <svg width="48" height="31" viewBox="0 0 48 31" xmlns="http://www.w3.org/2000/svg">
+              <path
+                class="transition-colors"
+                d="M47.2758 26.0686C46.7246 20.5328 43.9791 15.4546 40.0118 11.6492C39.2754 10.9426 39.0839 9.84647 39.6075 8.97173L42.7063 3.80627C43.3108 2.79745 42.9851 1.49065 41.9763 0.886207C40.9675 0.281762 39.6607 0.609524 39.0562 1.61622L36.2447 6.30067C35.6892 7.2265 34.5186 7.61172 33.546 7.14136C30.5322 5.6792 27.2333 4.84064 23.8535 4.84064C20.4737 4.84064 17.1748 5.6792 14.1611 7.14136C13.1906 7.61172 12.0178 7.2265 11.4623 6.30067L8.65082 1.61622C8.04637 0.611652 6.7417 0.281762 5.73074 0.888335C4.72404 1.49278 4.39627 2.79957 5.00285 3.8084L8.10171 8.97386C8.62528 9.8486 8.43373 10.9447 7.69732 11.6513C3.73011 15.4567 0.984553 20.5349 0.433314 26.0707C0.171528 28.6864 1.04415 30.3806 3.50025 30.3806H44.2068C46.6629 30.3806 47.5355 28.6864 47.2758 26.0686ZM14.276 23.9956C12.5137 23.9956 11.0835 22.5654 11.0835 20.8031C11.0835 19.0408 12.5137 17.6106 14.276 17.6106C16.0383 17.6106 17.4685 19.0408 17.4685 20.8031C17.4685 22.5654 16.0383 23.9956 14.276 23.9956ZM33.431 23.9956C31.6688 23.9956 30.2385 22.5654 30.2385 20.8031C30.2385 19.0408 31.6688 17.6106 33.431 17.6106C35.1933 17.6106 36.6235 19.0408 36.6235 20.8031C36.6235 22.5654 35.1933 23.9956 33.431 23.9956Z"
+                fill={
+                  isAndroid.value ? 'var(--color-primary)' : 'var(--color-segment-control-active)'
+                }
+              />
+            </svg>
+          </div>
+          {/* iOSButton */}
+          <div
+            onClick={() => toggleOS(false)}
+            aria-current={!isAndroid.value}
+            class="transition-colors hover:bg-segment-control-hover active:bg-segment-control-focused aria-current:bg-segment-control-active w-11 h-11 flex justify-center items-center rounded-[13px] cursor-pointer"
+          >
+            <svg
+              width="37"
+              height="45"
+              viewBox="0 0 37 45"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="transition-colors"
+                d="M35.2422 15.125C35.0471 15.2475 30.4021 17.8311 30.4021 23.5595C30.621 30.0924 36.2638 32.3835 36.3606 32.3835C36.2638 32.5059 35.5087 35.5045 33.2719 38.6477C31.4967 41.3553 29.5264 44.0852 26.5345 44.0852C23.6885 44.0852 22.6669 42.2807 19.3831 42.2807C15.8565 42.2807 14.8587 44.0852 12.1587 44.0852C9.16674 44.0852 7.0505 41.2091 5.17857 38.5269C2.74663 35.0164 0.679571 29.5073 0.606597 24.2177C0.557419 21.4147 1.09362 18.6594 2.45474 16.3191C4.37585 13.0518 7.80562 10.8339 11.5511 10.7607C14.4209 10.6637 16.9749 12.7354 18.7263 12.7354C20.4047 12.7354 23.5426 10.7607 27.0929 10.7607C28.6254 10.7623 32.7119 11.225 35.2422 15.125ZM18.4836 10.2011C17.9728 7.64134 19.3831 5.08158 20.6966 3.44875C22.375 1.47408 25.0259 0.133789 27.3118 0.133789C27.4578 2.69354 26.5329 5.20401 24.8799 7.0324C23.3966 9.00707 20.8426 10.4936 18.4836 10.2011Z"
+                fill={
+                  isAndroid.value ? 'var(--color-segment-control-active)' : 'var(--color-primary)'
+                }
+              />
+            </svg>
+          </div>
+        </CustomContainer>
       </CustomContainer>
     )
   },
@@ -356,8 +356,8 @@ const Slide = defineComponent({
   },
   setup(props) {
     return () => (
-      <div class="h-full flex flex-col justify-center">
-        <div class="min-h-[50%] max-h-[90%] h-full flex flex-row justify-center items-center">
+      <div class="h-full flex flex-col justify-start">
+        <div class="min-h-[30%] sm:h-[70%] max-h-[80%] flex flex-row justify-center items-center">
           <div
             class="absolute mt-[20%] aspect-square min-w-[45%] w-full max-w-[50%] z-[-1] rounded-full"
             style="background: linear-gradient(180deg, #C8D3FF 0%, rgba(255, 255, 255, 0) 80%);"
@@ -368,7 +368,7 @@ const Slide = defineComponent({
             ))}
           </div>
         </div>
-        <p class="text-center w-full font-normal lg:px-30 text-[clamp(24px,2.5vw+0.5rem,1rem)]">
+        <p class="text-center w-full font-normal lg:px-30 text-[clamp(16px,2.5vw+0.5rem,1rem)]">
           {props.text}
         </p>
       </div>
