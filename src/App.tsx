@@ -104,7 +104,7 @@ export default defineComponent({
           </section>
           <section
             id="advantages"
-            class="flex justify-center flex-col gap-10 lg:gap-10 xxl:gap-10 scroll-mt-5 lg:scroll-mt-[-0.5rem] xl:scroll-mt-3 2xl:scroll-mt-15"
+            class="flex justify-center flex-col gap-5 scroll-mt-5 lg:scroll-mt-[-0.5rem] xl:scroll-mt-3 2xl:scroll-mt-15"
           >
             <AchievementsSectionBegin />
             <AchievementsSectionContinue />
