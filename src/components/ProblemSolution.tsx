@@ -16,12 +16,11 @@ export default defineComponent({
 
     return () => (
       <section
-        class="test flex h-[805px] mt-[130px] mb-[30px] overflow-hidden relative"
+        class="test flex md:h-[805px] mt-[130px] mb-[30px] overflow-hidden relative"
         id="problems"
       >
         <Container>
           <div class={` flex jusify-start  h-full`}>
-            {/* ПРОБЛЕМА */}
             <div
               class={[
                 'flex flex-col  h-full transition-all duration-500  max-w-full  lg:max-w-[490px] 2xl:max-w-[728px]',
@@ -30,8 +29,10 @@ export default defineComponent({
                   : 'opacity-0 -translate-x-20 z-0 pointer-events-none',
               ]}
             >
-              <h2 class="text-[2.7rem] text-brown font-semibold uppercase">Проблема</h2>
-              <p class="flex-1 font-light py-[1.4rem] leading-[100%]">
+              <h2 class="text-[clamp(32px,2.5vw+0.5rem,2.7rem)] text-brown font-semibold uppercase">
+                Проблема
+              </h2>
+              <p class="flex-1 font-light md:py-[1.4rem] py-[1.2rem] leading-[100%]">
                 При фиксации следа обуви традиционным методом фиксации (с помощью гипсовой смеси
                 и силикона) след обуви может повредиться, в результате чего возникает нечёткая
                 передача особенностей следа обуви, особенно на рыхлых и сыпучих типах поверхности.
@@ -46,7 +47,7 @@ export default defineComponent({
 
               <button
                 onClick={toggleSection}
-                class="cursor-pointer flex items-center gap-[50px] self-start uppercase font-normal text-[1.42rem] leading-[100%] border-black border-b pb-[0.6rem]"
+                class="cursor-pointer flex items-center gap-[50px] self-start uppercase font-normal md:text-[1.42rem] text-[1rem] leading-[100%] border-black border-b pb-[0.6rem]"
               >
                 Решение
                 <img class="w-[56px] h-[14px]" src={Arrow} alt="Стрелка вправо" />
@@ -94,8 +95,10 @@ export default defineComponent({
                   : 'opacity-0 translate-x-20  pointer-events-none',
               ]}
             >
-              <h2 class="text-[2.7rem] text-green-700 font-semibold uppercase">Решение</h2>
-              <p class="flex-1 font-light py-[1.4rem] leading-[100%]">
+              <h2 class="text-[clamp(32px,2.5vw+0.5rem,2.7rem)] text-green-700 font-semibold uppercase">
+                Решение
+              </h2>
+              <p class="flex-1 font-light md:py-[1.4rem] py-[1.2rem] leading-[100%]">
                 Приложение SLED позволит усовершенствовать процесс фиксации следов обуви (в рамках
                 фиксации доказательств) на рыхлых и других сложных типах поверхности в условиях,
                 когда традиционные методы (гипсовая смесь и силикон) оказываются неэффективными
@@ -105,7 +108,7 @@ export default defineComponent({
               </p>
               <button
                 onClick={toggleSection}
-                class="cursor-pointer flex items-center gap-[50px] self-start uppercase font-normal text-[1.42rem] leading-[100%] border-black border-b pb-[0.6rem]"
+                class="cursor-pointer flex items-center gap-[50px] self-start uppercase font-normal md:text-[1.42rem] text-[1rem] leading-[100%] border-black border-b pb-[0.6rem]"
               >
                 <img class="w-[56px] h-[14px] rotate-180" src={Arrow} alt="Стрелка вправо" />{' '}
                 Проблема
