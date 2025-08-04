@@ -8,7 +8,7 @@ export default defineComponent({
   setup() {
     return () => (
       <CustomContainer class="h-full">
-        <div class="m-auto h-full w-[90%] space-y-[5%]">
+        <div class="m-auto h-full space-y-[5%]">
           <div class="relative flex justify-center">
             <div class="flex w-[90%] justify-center flex-wrap items-center">
               <img
@@ -16,7 +16,7 @@ export default defineComponent({
                 src={AcceleratorLeft}
                 alt=""
               />
-              <h2 class="text-center text-[clamp(24px,2.0vw+0.5rem,1.5rem)] py-3 lg:pb-5 text-white font-normal lg:order-3 font-roboto-condensed uppercase">
+              <h2 class="text-center text-[clamp(16px,2.0vw+0.5rem,1.5rem)] py-3 lg:pb-5 text-white font-normal lg:order-3 font-roboto-condensed uppercase">
                 Прохождение в финал «Акселератора технологических стартапов в Югре», проходивший
                 с 1 октября по 16 ноября 2024 года.
               </h2>
@@ -38,7 +38,7 @@ export default defineComponent({
                 />
                 <div class="absolute rounded-t-[56px] lg:rounded-[30px] inset-0 bottom-0 bg-linear-to-t from-blue to-transparent" />
                 <div class="absolute flex bottom-[-35%] lg:bottom-[-10%] px-2">
-                  <h2 class="p-2 text-[clamp(24px,2.0vw+0.5rem,1.5rem)] text-white font-normal font-roboto-condensed uppercase">
+                  <h2 class="p-2 text-[clamp(16px,2.0vw+0.5rem,1.5rem)] text-white font-normal font-roboto-condensed uppercase">
                     Презентация проекта на встрече с губернатором ХМАО-Югры Русланом Кухарук
                   </h2>
                   <div class="flex justify-center items-center">

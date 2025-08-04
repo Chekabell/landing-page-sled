@@ -275,7 +275,7 @@ export default defineComponent({
             </div>
           </div>
           <Swiper
-            class="h-[100%]"
+            class="h-full !touch-pan-y"
             direction="vertical"
             allowTouchMove={false}
             onSwiper={handleSwiperInit}
