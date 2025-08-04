@@ -8,7 +8,7 @@ export default defineComponent({
   setup() {
     return () => (
       <CustomContainer class="sm:my-30 lg:my-20 xl:my-30 h-full flex items-center">
-        <img class="hidden sm:block absolute h-full left-0 z-[-1]" src={LeftPattern} />
+        <img class="hidden sm:block absolute h-[90%] left-0 z-[-1]" src={LeftPattern} />
         <div class="w-full bg-white py-3 px-3 border-1 rounded-[30px] lg:bg-transparent lg:border-0 lg:px-40 flex flex-col gap-6">
           <h2 class="text-center text-[clamp(24px,2.5vw+0.5rem,3.125rem)] text-blue font-semibold uppercase">
             Достижения
@@ -27,7 +27,7 @@ export default defineComponent({
             одобрение со стороны эксперта на реализацию
           </p>
         </div>
-        <img class="hidden sm:block absolute h-full right-0 z-[-1]" src={RightPattern} />
+        <img class="hidden sm:block absolute h-[90%] right-0 z-[-1]" src={RightPattern} />
       </CustomContainer>
     )
   },

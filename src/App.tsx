@@ -43,12 +43,12 @@ export default defineComponent({
                 </div>
               </div>
             </div>
-            <div
+            {/* <div
               class="absolute lg:block hidden right-0 bg-gradient-hero w-[476px] top-0 h-full rounded-[30px]"
               style={{
                 background: 'linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #C8D3FF 100%)',
               }}
-            />
+            /> */}
           </section>
           <section>
             <Container>
@@ -76,7 +76,7 @@ export default defineComponent({
           <section id="audiens" class="my-15 scroll-mt-80">
             <TargetGroup />
           </section>
-          <section id="about" class="h-[80vh] lg:h-screen">
+          <section id="about" class="h-[80vh] my-3 lg:h-screen">
             <CarouselAboutApplication />
           </section>
           <section class={'py-[50px]'}>

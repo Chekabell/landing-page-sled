@@ -214,11 +214,11 @@ export default defineComponent({
     }
 
     return () => (
-      <CustomContainer class="relative flex flex-col h-[100%]">
-        <h2 class="text-center text-[clamp(24px,2.5vw+0.5rem,3.125rem)] h-[8%] flex justify-center items-center text-blue font-semibold uppercase">
+      <CustomContainer class="relative flex flex-col justify-center h-full">
+        <h2 class="text-center text-[clamp(24px,2.5vw+0.5rem,3.125rem)] flex justify-center items-center text-blue font-semibold uppercase">
           Основные функции приложения
         </h2>
-        <div class="flex flex-row h-[84%]">
+        <div class="flex flex-row h-[70%] my-3">
           <div class="hidden lg:flex lg:flex-col lg:justify-center">
             <div
               class="w-full shadow-[0_1px_215px_0_rgba(0,0,0,0.25)] aspect-square transition-colors p-2 flex justify-center items-center rounded-full top-1/2 hover:bg-tretiary-hover active:bg-tretiary-focused cursor-pointer border-solid border-1 border-[#F1F1F1]"
@@ -232,7 +232,7 @@ export default defineComponent({
               </svg>
             </div>
           </div>
-          <div class="absolute bottom-[-37px] lg:bottom-[15%] z-[3] gap-1 flex flex-row">
+          <CustomContainer class="absolute left-0 w-full flex justify-center lg:justify-start z-[3] gap-1 bottom-[-5%] lg:bottom-[13.5%] flex-row">
             {/* AndroidButton */}
             <div
               onClick={() => toggleOS(true)}
@@ -273,7 +273,7 @@ export default defineComponent({
                 />
               </svg>
             </div>
-          </div>
+          </CustomContainer>
           <Swiper
             class="h-full !touch-pan-y"
             direction="vertical"
@@ -336,7 +336,7 @@ export default defineComponent({
           </div>
         </div>
         {/* Общая пагинация горизонтальных слайдеров */}
-        <div class="custom-pagination h-[8%] flex justify-center items-center ">
+        <div class="custom-pagination flex justify-center items-center ">
           {androidSlides.map((_, index) => (
             <button
               class={{ active: index === currentHorizontalIndex.value }}
@@ -357,9 +357,9 @@ const Slide = defineComponent({
   setup(props) {
     return () => (
       <div class="h-full flex flex-col justify-center">
-        <div class="h-[65%] lg:h-[70%] xl:h-[80%] xxl:h-[90%] flex flex-row justify-center items-center">
+        <div class="min-h-[50%] max-h-[90%] h-full flex flex-row justify-center items-center">
           <div
-            class="absolute aspect-square w-[60%] lg:w-[55%] xxl:w-[55%] 2xl:w-[45%] z-[-1] top-[30%] rounded-full"
+            class="absolute mt-[20%] aspect-square min-w-[45%] w-full max-w-[50%] z-[-1] rounded-full"
             style="background: linear-gradient(180deg, #C8D3FF 0%, rgba(255, 255, 255, 0) 80%);"
           />
           <div class="flex justify-center items-center w-full h-full">
@@ -368,7 +368,7 @@ const Slide = defineComponent({
             ))}
           </div>
         </div>
-        <p class="text-center w-full font-normal lg:px-12 text-[clamp(24px,2.5vw+0.5rem,1rem)]">
+        <p class="text-center w-full font-normal lg:px-30 text-[clamp(24px,2.5vw+0.5rem,1rem)]">
           {props.text}
         </p>
       </div>

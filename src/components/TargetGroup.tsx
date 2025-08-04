@@ -6,7 +6,7 @@ export default defineComponent({
   setup() {
     return () => (
       <CustomContainer class="flex justify-center">
-        <div class="w-[90%] flex flex-wrap xxl:flex-nowrap justify-center gap-2">
+        <div class="flex flex-wrap xxl:flex-nowrap justify-center gap-2">
           <div class="bg-blue rounded-[14px] aspect-square px-5 flex justify-center items-center sm:order-2">
             <img class="h-full w-full" src={Policeman} />
           </div>
